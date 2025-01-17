@@ -3,7 +3,7 @@ pipeline {
         jdk 'JAVA_HOME1'
         maven 'MAVEN_HOME'
     }
-    agent {label winslave}
+    agent {label 'winslave'}
 
     stages {
         stage('git clone') {
