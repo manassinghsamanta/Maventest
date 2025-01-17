@@ -3,7 +3,7 @@ pipeline {
 	
     stages {
 		
-        stage('git clone compile test pkg on linux') {
+        stage('linux') {
 			tools{
 				jdk 'JAVA_HOME'
 				maven 'M2_HOME'
@@ -28,7 +28,7 @@ pipeline {
             }
         }
 		
-		stage('git clone compile test pkg and dploy on win') {
+		stage('win') {
 			tools{
 				jdk 'JAVA_HOME1'
 				maven 'MAVEN_HOME'
