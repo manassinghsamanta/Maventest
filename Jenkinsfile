@@ -13,13 +13,18 @@ pipeline {
             steps {
                 git 'https://github.com/manassinghsamanta/Maventest.git'
                 echo 'git cloned successfully'
+            }
+			steps {
 				sh 'mvn compile'
-                echo 'successfully compiled the code'
+                echo 'successfully compiled the code'				
+            }
+			steps {
 				sh 'mvn test'
-                echo 'successfully unit testing done'
+                echo 'successfully unit testing done'				
+            }
+			steps {
 				sh 'mvn package'
-                echo 'successfully packeged'
-				
+                echo 'successfully packaged'				
             }
         }
 		
@@ -33,12 +38,20 @@ pipeline {
             steps {
                 git 'https://github.com/manassinghsamanta/Maventest.git'
                 echo 'git cloned successfully'
+            }
+			steps {
 				bat 'mvn compile'
                 echo 'successfully compiled the code'
+            }
+			steps {
 				bat 'mvn test'
                 echo 'successfully unit testing done'
+            }
+			steps {
 				bat 'mvn package'
                 echo 'successfully packeged'
+            }
+			steps {
 				echo 'successfully deployed'
             }
         }
